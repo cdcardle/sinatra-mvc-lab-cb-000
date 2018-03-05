@@ -9,22 +9,20 @@ class PigLatinizer
     !@word.strip.include?(" ")
   end
 
-  def piglatinize
-    raise TypeError, 'Error! You must enter exactly one English word only!' if !single_word?
-
-    text = @word
-    case text
+  def piglatinize(word)
+    word
+    case word
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
-      text = text[1..-1] + text[0] + 'ay'
+      word = word[1..-1] + word[0] + 'ay'
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
-      text = text[2..-1] + text[0..1] + 'ay'
+      word = word[2..-1] + word[0..1] + 'ay'
     when /^[aieou]/
-      text += 'way'
+      word += 'way'
     else
       raise TypeError, 'Test'
     end
 
-    text
+    word
   end
 
   def to_pig_latin
