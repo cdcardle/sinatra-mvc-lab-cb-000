@@ -1,10 +1,6 @@
 class PigLatinizer
   attr_reader :word
 
-  def single_word?
-    !@word.strip.include?(" ")
-  end
-
   def piglatinize(word)
     case word
     when /^[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ][aieouAEIOU]/
