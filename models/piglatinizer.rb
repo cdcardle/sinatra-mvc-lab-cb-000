@@ -17,7 +17,7 @@ class PigLatinizer
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
       text.gsub(/^./, '') << 'ay'
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
-      #move first two letters to end + 'ay'
+      text.gsub(/^../, '') << 'ay'
     when /^[aieou]/
       text += 'way'
     end
