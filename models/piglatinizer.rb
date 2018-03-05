@@ -27,7 +27,7 @@ class PigLatinizer
     phrase.split.each do |word|
       array << piglatinize(word)
     end
-    array.join " "
+    array.join(" ")
   end
 
 end
