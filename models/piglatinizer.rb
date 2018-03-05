@@ -9,8 +9,10 @@ class PigLatinizer
     case word.downcase
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
       word = word[1..-1] + word[0] + 'ay'
-    when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
+    when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz][aeiou]/
       word = word[2..-1] + word[0..1] + 'ay'
+    when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
+      word = word[3..-1] + word[0..2] + 'ay'
     when /^[aieou]/
       word += 'way'
     end
