@@ -1,9 +1,6 @@
 class PigLatinizer
   attr_reader :word
 
-  def initialize
-  end
-
   def single_word?
     !@word.strip.include?(" ")
   end
