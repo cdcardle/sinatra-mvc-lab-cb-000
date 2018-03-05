@@ -23,7 +23,11 @@ class PigLatinizer
   end
 
   def to_pig_latin(phrase)
-    phrase.split('')
+    string = ""
+    phrase.split.each do |word|
+      string << piglatinize(word)
+    end
+    string
   end
 
 end
