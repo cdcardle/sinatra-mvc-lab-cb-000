@@ -15,9 +15,9 @@ class PigLatinizer
     text = @word
     case text
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
-      text.gsub(/^./, '') << 'ay'
+      text[1..-1] + text[0] + 'ay'
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
-      text.gsub(/^../, '') << 'ay'
+      text[2..-1] + text[0..1] + 'ay'
     when /^[aieou]/
       text += 'way'
     end
