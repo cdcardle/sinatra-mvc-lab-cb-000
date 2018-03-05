@@ -1,5 +1,4 @@
 class PigLatinizer
-  attr_accessor :phrase
 
   def piglatinize(word)
     case word
@@ -18,9 +17,9 @@ class PigLatinizer
     word
   end
 
-  def to_pig_latin
+  def to_pig_latin(phrase)
     array = []
-    @phrase.split.each do |word|
+    phrase.split.each do |word|
       array << piglatinize(word)
     end
     array.join(" ")
