@@ -20,8 +20,10 @@ class PigLatinizer
       text[2..-1] + text[0..1] + 'ay'
     when /^[aieou]/
       text += 'way'
+    else
+      raise TypeError, 'Test'
     end
-    
+
     text
   end
 
