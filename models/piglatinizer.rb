@@ -15,13 +15,15 @@ class PigLatinizer
       word = word[3..-1] + word[0..2] + 'ay'
     when /^[aieou]/
       word += 'way'
+    else
+      raise TypeError, 'Unacceptable Word!'
     end
 
     word
   end
 
   def to_pig_latin(phrase)
-
+    phrase.split('')
   end
 
 end
