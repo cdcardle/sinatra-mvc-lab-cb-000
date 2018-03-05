@@ -1,10 +1,6 @@
 class PigLatinizer
   attr_accessor :phrase
 
-  def initialize(phrase)
-    @phrase = phrase
-  end
-
   def piglatinize(word)
     case word
     when /^[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ][aieouAEIOU]/
