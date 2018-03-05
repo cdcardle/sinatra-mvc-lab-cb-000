@@ -18,8 +18,6 @@ class PigLatinizer
       word = word[2..-1] + word[0..1] + 'ay'
     when /^[aieou]/
       word += 'way'
-    else
-      raise TypeError, 'Test'
     end
 
     word
