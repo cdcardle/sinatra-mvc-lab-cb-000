@@ -41,7 +41,7 @@ end
 #When words begin with consonant clusters (multiple consonants that form one sound), the whole sound is added to the end when speaking or writing
 #cheers = eerschay
 #thanks = anksthay
-#glove = oveglay
+#school = oolschay
 
 #For words that begin with vowel sounds, one just adds "way" or "yay" to the end (or just "ay").
 #eat = eatway
