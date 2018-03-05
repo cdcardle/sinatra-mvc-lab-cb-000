@@ -12,13 +12,14 @@ class PigLatinizer
   def pig_latinize
     raise TypeError, 'Error! You must enter exactly one English word only!' if !single_word?
 
-    case @word
+    text = @word
+    case text
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
-      #move first letter to end + 'ay'
+      text.gsub(/^./, '') << 'ay'
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
       #move first two letters to end + 'ay'
     when /^[aieou]/
-      @word + 'way'
+      text += 'way'
     end
   end
 
