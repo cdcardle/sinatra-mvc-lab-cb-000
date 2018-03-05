@@ -1,5 +1,9 @@
 class PigLatinizer
-  attr_reader :word
+  attr_reader :phrase
+
+  def initialize(phrase)
+    @phrase = phrase
+  end
 
   def piglatinize(word)
     case word
