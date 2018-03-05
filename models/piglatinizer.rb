@@ -15,9 +15,9 @@ class PigLatinizer
     text = @word
     case text
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
-      text[1..-1] + text[0] + 'ay'
+      text = text[1..-1] + text[0] + 'ay'
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
-      text[2..-1] + text[0..1] + 'ay'
+      text = text[2..-1] + text[0..1] + 'ay'
     when /^[aieou]/
       text += 'way'
     else
