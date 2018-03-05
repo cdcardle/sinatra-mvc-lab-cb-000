@@ -6,8 +6,7 @@ class PigLatinizer
   end
 
   def piglatinize(word)
-    word
-    case word
+    case word.downcase
     when /^[bcdfghjklmnpqrstvwxyz][aieou]/
       word = word[1..-1] + word[0] + 'ay'
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
