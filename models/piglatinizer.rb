@@ -21,6 +21,7 @@ class PigLatinizer
     when /^[aieou]/
       text += 'way'
     end
+    text
   end
 
 end
