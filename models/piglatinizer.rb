@@ -22,9 +22,9 @@ class PigLatinizer
     word
   end
 
-  def to_pig_latin(phrase)
+  def to_pig_latin
     array = []
-    phrase.split.each do |word|
+    @phrase.split.each do |word|
       array << piglatinize(word)
     end
     array.join(" ")
