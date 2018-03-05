@@ -23,11 +23,11 @@ class PigLatinizer
   end
 
   def to_pig_latin(phrase)
-    string = ""
+    array = []
     phrase.split.each do |word|
-      string << piglatinize(word)
+      array << piglatinize(word)
     end
-    string
+    array.join " "
   end
 
 end
