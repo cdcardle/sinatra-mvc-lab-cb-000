@@ -9,7 +9,7 @@ class PigLatinizer
     !@word.strip.include?(" ")
   end
 
-  def pig_latinize
+  def piglatinize
     raise TypeError, 'Error! You must enter exactly one English word only!' if !single_word?
 
     text = @word
@@ -25,6 +25,10 @@ class PigLatinizer
     end
 
     text
+  end
+
+  def to_pig_latin
+
   end
 
 end
