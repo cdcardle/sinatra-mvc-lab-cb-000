@@ -18,7 +18,7 @@ class PigLatinizer
     when /^[bcdfghjklmnpqrstvwxyz][bcdfghjklmnpqrstvwxyz]/
       #move first two letters to end + 'ay'
     when /^[aieou]/
-      #add 'way' to end
+      @word + 'way'
     end
   end
 
