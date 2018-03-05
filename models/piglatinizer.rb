@@ -2,6 +2,8 @@ class PigLatinizer
 
   def piglatinize(word)
     case word
+    when /^[q][u]/
+      word = word[2..-1] + word[0..1] + 'ay'
     when /^[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ][aieouAEIOU]/
       word = word[1..-1] + word[0] + 'ay'
     when /^[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ][bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ][aeiouAEIOU]/
