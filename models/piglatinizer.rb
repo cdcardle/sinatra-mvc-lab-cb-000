@@ -20,7 +20,7 @@ class PigLatinizer
     word
   end
 
-  def to_pig_latin
+  def to_pig_latin(phrase)
 
   end
 
